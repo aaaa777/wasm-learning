@@ -5,13 +5,15 @@
   </body>
   <script type="text/ruby">
     require 'js'
+
     Document = JS.global[:document]
+
     b = Document.getElementById('b')
     b.addEventListener('click') do |e|
-    Fiber.new do
-    p JS.global.fetch('/image/wasi-vfs.png').await
-    #=> [objcet Response]
-    end.transfer
+      Fiber.new do
+        p JS.global.fetch('/image/wasi-vfs.png').await
+          #=> [objcet Response]
+      end.transfer
     end
   </script>
 </html>
