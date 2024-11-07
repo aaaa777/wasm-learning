@@ -1,0 +1,14 @@
+<html>
+  <script src="https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.6.2/dist/browser.script.iife.js"></script>
+  <script type="text/ruby">
+    require "js"
+    document = JS.global[:document]
+
+    document.addEventListener('click') do |e|
+      JS.global.alert("Popup clicked!")
+    end
+  </script>
+  <body>
+    <button id="popup">popup button</button>
+  </body>
+</html>

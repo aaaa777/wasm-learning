@@ -1,0 +1,19 @@
+<html>
+  <script src="https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.6.2/dist/browser.script.iife.js"></script>
+  <body>
+    <input id="b" type="button" value="button"></input>
+  </body>
+  <script type="text/ruby">
+    require 'js'
+
+    Document = JS.global[:document]
+
+    b = Document.getElementById('b')
+    b.addEventListener('click') do |e|
+      Fiber.new do
+        p JS.global.fetch('/image/wasi-vfs.png').await
+          #=> [objcet Response]
+      end.transfer
+    end
+  </script>
+</html>
