@@ -1,0 +1,6 @@
+$:.unshift File.expand_path("/bundle/gems/diff-lcs-1.5.1/lib")
+$:.unshift File.expand_path("/bundle/gems/rspec-support-3.13.1/lib")
+$:.unshift File.expand_path("/bundle/gems/rspec-core-3.13.1/lib")
+$:.unshift File.expand_path("/bundle/gems/rspec-expectations-3.13.3/lib")
+$:.unshift File.expand_path("/bundle/gems/rspec-mocks-3.13.1/lib")
+$:.unshift File.expand_path("/bundle/gems/rspec-3.13.0/lib")
